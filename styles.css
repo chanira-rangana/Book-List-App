@@ -32,6 +32,14 @@ header h1 span {
   color: #04aa6d;
 }
 
+#error {
+  background-color: #dc3545;
+  padding: 8px;
+  color: white;
+  letter-spacing: 1px;
+  display: none;
+}
+
 form {
   width: 100%;
 }
@@ -108,7 +116,7 @@ table tbody tr td:last-child {
 .btn-danger {
   text-decoration: none;
   padding: 0 6px;
-  background-color: crimson;
+  background-color: #dc3545;
   color: white;
   cursor: pointer;
 }
