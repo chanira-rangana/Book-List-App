@@ -32,10 +32,23 @@ class UI {
     const list = document.querySelector('#book-list');
     list.appendChild(tr);
   }
+
+  static clearFields() {
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+    document.querySelector('#isbn').value = '';
+  }
+
+  static deleteBook(element) {
+    if (element.classList.contains('delete')) {
+      element.parentElement.parentElement.remove();
+    }
+  }
 }
 
 //Event display Book
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
+
 //Event form Submit (Add a Book)
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault;
@@ -46,4 +59,11 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const newBook = new Book(title, author, isbn);
 
   UI.addBook(newBook);
+
+  //clear Fields
+  UI.clearFields();
+});
+
+document.querySelector('#book-list').addEventListener('click', (e) => {
+  UI.deleteBook(e.target);
 });
