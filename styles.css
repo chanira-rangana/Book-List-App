@@ -10,13 +10,15 @@
   margin: 0 auto;
   font-family: 'Poppins', 'Roboto', sans-serif;
 }
-
 header {
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
+header > * {
+  padding: 14px;
+}
 header i {
   font-size: 48px;
   margin-top: 12px;
@@ -28,8 +30,4 @@ header h1 {
 
 header h1 span {
   color: #f53838;
-}
-
-header > * {
-  padding: 14px;
 }
