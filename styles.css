@@ -23,6 +23,7 @@ header i {
   font-size: 48px;
   margin-top: 12px;
   color: #04aa6d;
+  cursor: pointer;
 }
 header h1 {
   font-size: 48px;
@@ -39,7 +40,20 @@ header h1 span {
   letter-spacing: 1px;
   display: none;
 }
-
+#success {
+  background-color: #04aa6d;
+  padding: 8px;
+  color: white;
+  letter-spacing: 1px;
+  display: none;
+}
+#delete {
+  background-color: #ffc107;
+  padding: 8px;
+  color: white;
+  letter-spacing: 1px;
+  display: none;
+}
 form {
   width: 100%;
 }
@@ -84,7 +98,6 @@ table {
 
 table > td,
 th {
-  border: 1px solid #ddd;
   padding: 8px;
 }
 
@@ -94,7 +107,13 @@ table th {
   background-color: #04aa6d;
   font-weight: normal;
   color: white;
+  letter-spacing: 1px;
 }
+
+table thead tr th {
+  border-right: 2px solid white;
+}
+
 table thead tr th:last-child {
   display: none;
 }
